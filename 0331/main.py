@@ -21,9 +21,3 @@ while True:
         sleep(1)
     else:
         led.value(0) #Set led turn off
-        
-# while True:
-#     led.value(0) #Set led turn on
-#     sleep(1)
-#     led.value(1) #Set led turn off
-#     sleep(1)
