@@ -4,14 +4,14 @@ import time
 led=Pin(5 ,Pin.OUT)
 button_pin = Pin(7, Pin.IN, Pin.PULL_UP)
 
-flag = 0
+led_push = 0
 
 while True:
     if button_pin.value() == 0:
-        if flag == 0:
-            flag = 1
+        if led_push == 0:
+            led_push = 1
         else:
-            flag = 0
+            led_push = 0
 
         print("Button Pressed!")
         time.sleep(0.2)
@@ -19,5 +19,5 @@ while True:
     else:
         print("Button OFF!")
 
-    led.value(flag)
+    led.value(led_push)
     time.sleep(0.05)
